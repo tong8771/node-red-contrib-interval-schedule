@@ -1,0 +1,26 @@
+<script type="text/javascript">
+  RED.nodes.registerType('intervalSchedule',{
+      category: 'function',
+      color: '#a6bbcf',
+      defaults: {
+          name: {value:""}
+      },
+      inputs: 1,
+      outputs: 1,
+      icon: "timer.svg",
+      label: function() {
+          return this.name||"intervalSchedule";
+      }
+  });
+</script>
+
+<script type="text/html" data-template-name="intervalSchedule">
+  <div class="form-row">
+      <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/html" data-help-name="intervalSchedule">
+  <p>A simple node that converts the message payloads into all intervalSchedule characters</p>
+</script>
