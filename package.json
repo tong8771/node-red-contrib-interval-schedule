@@ -8,6 +8,7 @@
   },
   "author": "tong8771 <81398771@qq.com>",
   "license": "MIT",
+  "keywords": [ "node-red" ],
   "node-red": {
     "nodes": {
       "intervalSchedule": "nodes/intervalSchedule.js"
