@@ -1,12 +1,12 @@
 {
   "name": "node-red-interval-schedule",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A custom Node-RED node",
+  "main": "nodes/intervalSchedule.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "tong8771 <81398771@qq.com>",
   "license": "MIT",
   "node-red": {
     "nodes": {

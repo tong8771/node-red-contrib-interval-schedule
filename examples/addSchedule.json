@@ -1,0 +1,156 @@
+[
+  {
+      "id": "5bf2531db3ea10a0",
+      "type": "tab",
+      "label": "流程 1",
+      "disabled": false,
+      "info": "",
+      "env": []
+  },
+  {
+      "id": "d0e119fd1a778cde",
+      "type": "mqtt-broker",
+      "name": "",
+      "broker": "111.229.106.226",
+      "port": "1883",
+      "clientid": "local_node_red",
+      "autoConnect": true,
+      "usetls": false,
+      "protocolVersion": "5",
+      "keepalive": "60",
+      "cleansession": true,
+      "autoUnsubscribe": true,
+      "birthTopic": "",
+      "birthQos": "0",
+      "birthRetain": "false",
+      "birthPayload": "",
+      "birthMsg": {},
+      "closeTopic": "",
+      "closeQos": "0",
+      "closeRetain": "false",
+      "closePayload": "",
+      "closeMsg": {},
+      "willTopic": "",
+      "willQos": "0",
+      "willRetain": "false",
+      "willPayload": "",
+      "willMsg": {},
+      "userProps": "",
+      "sessionExpiry": ""
+  },
+  {
+      "id": "1b2833d14aa26427",
+      "type": "mqtt in",
+      "z": "5bf2531db3ea10a0",
+      "name": "",
+      "topic": "setInterval",
+      "qos": "1",
+      "datatype": "auto-detect",
+      "broker": "d0e119fd1a778cde",
+      "nl": false,
+      "rap": true,
+      "rh": 0,
+      "inputs": 0,
+      "x": 260,
+      "y": 300,
+      "wires": [
+          [
+              "d6ba06a8f287361b",
+              "fb66e78a9e31dc23"
+          ]
+      ]
+  },
+  {
+      "id": "d6ba06a8f287361b",
+      "type": "debug",
+      "z": "5bf2531db3ea10a0",
+      "name": "debug 1",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "false",
+      "statusVal": "",
+      "statusType": "auto",
+      "x": 460,
+      "y": 420,
+      "wires": []
+  },
+  {
+      "id": "cac397a8d856f4ee",
+      "type": "mqtt out",
+      "z": "5bf2531db3ea10a0",
+      "name": "setInterval-pub",
+      "topic": "",
+      "qos": "",
+      "retain": "",
+      "respTopic": "",
+      "contentType": "",
+      "userProps": "",
+      "correl": "",
+      "expiry": "",
+      "broker": "d0e119fd1a778cde",
+      "x": 260,
+      "y": 220,
+      "wires": []
+  },
+  {
+      "id": "66c5fc9e83cd5894",
+      "type": "inject",
+      "z": "5bf2531db3ea10a0",
+      "name": "",
+      "props": [
+          {
+              "p": "payload"
+          },
+          {
+              "p": "topic",
+              "vt": "str"
+          }
+      ],
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "topic": "setInterval",
+      "payload": "{   \"command\":\"add\",   \"name\":\"o1\",   \"intervalTime\": \"2\",   \"payload\": {     \"data\":\"hello,interval-schedule\"   } }",
+      "payloadType": "json",
+      "x": 90,
+      "y": 220,
+      "wires": [
+          [
+              "cac397a8d856f4ee"
+          ]
+      ]
+  },
+  {
+      "id": "fb66e78a9e31dc23",
+      "type": "intervalSchedule",
+      "z": "5bf2531db3ea10a0",
+      "name": "",
+      "x": 510,
+      "y": 300,
+      "wires": [
+          [
+              "64a7b5fcb9d1f254"
+          ]
+      ]
+  },
+  {
+      "id": "64a7b5fcb9d1f254",
+      "type": "debug",
+      "z": "5bf2531db3ea10a0",
+      "name": "output",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "payload",
+      "targetType": "msg",
+      "statusVal": "",
+      "statusType": "auto",
+      "x": 750,
+      "y": 300,
+      "wires": []
+  }
+]
