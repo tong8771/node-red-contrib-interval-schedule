@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-interval-schedule",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom Node-RED node",
   "main": "nodes/intervalSchedule.js",
   "scripts": {
@@ -9,10 +9,12 @@
   "author": "tong8771 <81398771@qq.com>",
   "license": "MIT",
   "repository": {
-        "type": "git",
-        "url": "https://github.com/tong8771/node-red-contrib-interval-schedule.git"
-    },
-  "keywords": [ "node-red" ],
+    "type": "git",
+    "url": "https://github.com/tong8771/node-red-contrib-interval-schedule.git"
+  },
+  "keywords": [
+    "node-red"
+  ],
   "node-red": {
     "nodes": {
       "intervalSchedule": "nodes/intervalSchedule.js"
