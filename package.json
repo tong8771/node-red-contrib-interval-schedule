@@ -8,10 +8,17 @@
   },
   "author": "tong8771 <81398771@qq.com>",
   "license": "MIT",
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/tong8771/node-red-contrib-interval-schedule.git"
+    },
   "keywords": [ "node-red" ],
   "node-red": {
     "nodes": {
       "intervalSchedule": "nodes/intervalSchedule.js"
     }
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
