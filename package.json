@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-interval-schedule",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A custom Node-RED node",
   "main": "nodes/intervalSchedule.js",
   "scripts": {
