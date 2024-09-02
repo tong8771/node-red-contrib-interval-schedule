@@ -43,7 +43,10 @@ module.exports = function(RED) {
     }
 
     function removeInterval(payload) {
-      clearInterval(timers[payload.name])
+      if (timers[payload.name]) {
+        clearInterval(timers[payload.name].interval) // 删除定时器对象中的计时器
+        delete timers[payload.name] // 删除计时器对象
+      }
     }
 
     function updateInterval(payload) {
