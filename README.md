@@ -37,6 +37,9 @@ A node that configures scheduled tasks based on received MQTT messages
 } 
 ```
 
+_Any data can be stored in the payload, and the node will send the payload content to the next node at the configured time interval_  
+_在payload中可以存储任意数据，节点会将payload内容按配置的时间间隔发送至下一个节点_
+
 - Output  
 
 | "payload" |
